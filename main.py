@@ -1,5 +1,6 @@
-from fastapi import FastAPI
-from starlette.requests import Request
+from logging import debug
+import uvicorn
+from fastapi import FastAPI, Request
 from productos import items
 app = FastAPI(tittle='CiberC demo APIs', description= 'un demo pequeno de APIs', version='1.0')
 @app.get('/')
@@ -8,7 +9,7 @@ async def index():
 
 @app.get('/about/')
 async def about():
-    return 'Estamos en el about del servicio web'
+    return 'Estamos en el about de la aplicacion saludos'
 
 #Listar todos los productos
 @app.get('/productos/')
@@ -28,3 +29,8 @@ async def producto(product_name):
 @app.post('/producto/')
 async def addproduct(requests:Request):
     print (await requests.json())
+
+
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, log_level="info", reload=True, debug=True)
