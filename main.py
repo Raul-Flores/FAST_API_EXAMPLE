@@ -28,7 +28,7 @@ async def producto(product_name):
     if (len(products_found) > 0):
         return {'mensaje': 'Item encontado', 'Productos': products_found[0]}
     else:
-        return {'mensaje': 'Item no encontrado en la BD'} \
+        return {'mensaje': 'Item no encontrado en la BD'}
 
 ####POST Agregar nuevo producto
 @app.post('/producto/')

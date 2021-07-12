@@ -1,0 +1,15 @@
+asgiref==3.4.1
+certifi==2021.5.30
+chardet==4.0.0
+click==8.0.1
+fastapi==0.66.0
+h11==0.12.0
+idna==2.10
+peewee==3.14.4
+peewee-migrations==0.3.19
+pydantic==1.8.2
+PyMySQL==1.0.2
+starlette==0.14.2
+typing-extensions==3.10.0.0
+urllib3==1.26.6
+uvicorn==0.14.0
