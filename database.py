@@ -1,7 +1,7 @@
 from re import I
 from peewee import *
 
-database = MySQLDatabase('test', user='root', password='test', host='localhost', port=3306)
+database = MySQLDatabase('gestion', user='root', password='test', host='localhost', port=3306)
 
 class item(Model):
     name = CharField(max_length=30)
