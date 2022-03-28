@@ -69,5 +69,5 @@ async def update_item(item_id, data: ItemRequestModel):
         data_create.execute()
     return "Item actualizado"
 
-if __name__ == "__main__":
-    uvicorn.run("main-sql:app", host="127.0.0.1", port=8000, log_level="info", reload=True, debug=True)
+#if __name__ == "__main__":
+#    uvicorn.run("main-sql:app", host="0.0.0.0", port=8000, log_level="info", reload=True, debug=True)
