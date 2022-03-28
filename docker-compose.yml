@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+
+  mariadb:
+     container_name: db
+     image: mariadb:latest
+     restart: always
+     volumes:
+       - ./db/mariadb/mariadb-data:/var/lib/mysql
+     ports:
+       - 3306:3306
+     environment:
+       - MYSQL_ROOT_PASSWORD=app123
+       - MYSQL_DATABASE=gestion
+
+  app:
+    container_name: netapp
+    build: ./
+    restart: always
+    ports:
+      - 8000:8000
+
+
